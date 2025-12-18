@@ -1,7 +1,7 @@
-name: astrbot_plugin_image_summary # 这是你的插件的唯一识别名。
+name: astrbot_plugin_image_summary
 display_name: 图片外显
-desc: "[仅aiocqhttp] 图片外显插件, 将群外显示的“图片”二字替换成更丰富的句子"  # 插件简短描述
+desc: "[仅aiocqhttp] 图片外显插件, 将群外显示的“图片”二字替换成更丰富的句子"
 help: None
-version: v1.0.4 # 插件版本号。格式：v1.1.1 或者 v1.1
-author: Zhalslar # 作者
-repo: https://github.com/Zhalslar/astrbot_plugin_image_summary # 插件的仓库地址
+version: v1.0.4
+author: Zhalslar
+repo: https://github.com/Zhalslar/astrbot_plugin_image_summary

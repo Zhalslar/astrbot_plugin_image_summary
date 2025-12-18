@@ -1,24 +1,20 @@
 import json
-from pathlib import Path
 import random
+from pathlib import Path
+
 import aiohttp
-from astrbot.api.star import Context, Star, register
+
+from astrbot.api import logger
+from astrbot.api.event import filter
+from astrbot.api.star import Context, Star
 from astrbot.core.config.astrbot_config import AstrBotConfig
 from astrbot.core.message.components import Image
 from astrbot.core.message.message_event_result import MessageChain
 from astrbot.core.platform.sources.aiocqhttp.aiocqhttp_message_event import (
     AiocqhttpMessageEvent,
 )
-from astrbot.api.event import filter
-from astrbot.api import logger
 
 
-@register(
-    "astrbot_plugin_image_summary",
-    "Zhalslar",
-    "图片外显插件",
-    "v1.0.3",
-)
 class ImageSummaryPlugin(Star):
     def __init__(self, context: Context, config: AstrBotConfig):
         super().__init__(context)
@@ -39,7 +35,11 @@ class ImageSummaryPlugin(Star):
         ):
             return
 
-        chain = event.get_result().chain
+        result = event.get_result()
+        if not result:
+            return
+
+        chain = result.chain
 
         # 仅考虑单张图片消息
         if chain and len(chain) == 1 and isinstance(chain[0], Image):
