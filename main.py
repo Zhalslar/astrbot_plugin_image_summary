@@ -50,7 +50,6 @@ class ImageSummaryPlugin(Star):
             await event.bot.send(event.message_obj.raw_message, obmsg)  # type: ignore
             # 清空原消息链
             chain.clear()
-            event.stop_event()
 
     async def get_quote(self, max_len=20):
         """获取外显文本, 过长则截断"""

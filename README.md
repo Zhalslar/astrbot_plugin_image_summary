@@ -14,6 +14,9 @@ _✨ [astrbot](https://github.com/AstrBotDevs/AstrBot) 图片外显插件 ✨_
 
 </div>
 
+> **warning**:  
+> 本插件已停止更新维护，相关功能已整合到另一个插件：[输出增强](https://github.com/Zhalslar/astrbot_plugin_outputpro)
+
 ## 🤝 介绍
 
 图片外显插件, 将群外显示的"[图片]"替换成更丰富的句子
